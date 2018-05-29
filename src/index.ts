@@ -28,7 +28,7 @@ export class RedisPriorityQueue implements IPriorityQueue<string> {
     protected readonly DEFAULT_REDIS_PORT: number = 6379;
 
     constructor(config: RedisConfig, client?: redis.RedisClient) {
-        if (client && client instanceof redis.RedisClient) {
+        if (client) {
             this.client = client;
         } else {
             // build properties for instantiating Redis
