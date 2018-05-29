@@ -15,7 +15,7 @@ var RedisPriorityQueue = (function () {
     function RedisPriorityQueue(config, client) {
         this.DEFAULT_REDIS_HOST = "localhost";
         this.DEFAULT_REDIS_PORT = 6379;
-        if (client && client instanceof redis.RedisClient) {
+        if (client) {
             this.client = client;
         }
         else {
